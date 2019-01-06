@@ -201,6 +201,6 @@ void Switch::respondToSearch(IPAddress& senderIP, unsigned int senderPort) {
   UDP.beginPacket(senderIP, senderPort);
   UDP.write(response.c_str());
   UDP.endPacket();                    
-
+        yield();
    Serial.println("Response sent !");
 }
